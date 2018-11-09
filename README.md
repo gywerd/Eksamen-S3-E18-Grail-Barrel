@@ -1,1 +1,1 @@
-# Eksamen-S3-E18-Grail-Barrel
+# EksamenS3_AspIT_2018_Daniel_Giversen
