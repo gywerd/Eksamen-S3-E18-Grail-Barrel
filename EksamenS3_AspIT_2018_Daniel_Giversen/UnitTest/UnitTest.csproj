@@ -55,6 +55,40 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppIO\AppIO.csproj">
+      <Project>{b1f7743e-898e-452a-97e7-4554dc9322e1}</Project>
+      <Name>AppIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogisticsBizz\LogisticsBizz.csproj">
+      <Project>{29e51e92-161b-4ae8-95f0-878722c1b0fb}</Project>
+      <Name>LogisticsBizz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogisticsIO\LogisticsIO.csproj">
+      <Project>{e3896e18-b6fd-4c48-87bd-bd9bcb904e4e}</Project>
+      <Name>LogisticsIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchaseBizz\PurchaseBizz.csproj">
+      <Project>{3c1951f6-7f38-41dd-bf33-2cfbaed81172}</Project>
+      <Name>PurchaseBizz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchaseIO\PurchaseIO.csproj">
+      <Project>{a4dec87c-2483-4192-b9cd-b9a0ec941cb5}</Project>
+      <Name>PurchaseIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{8dbab079-56f6-4a69-9371-c38698534253}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaleBizz\SaleBizz.csproj">
+      <Project>{23cd6658-ab5d-4063-9b67-5759f2f6e6db}</Project>
+      <Name>SaleBizz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaleIO\SaleIO.csproj">
+      <Project>{3989891a-923f-46c4-b170-0fba17368921}</Project>
+      <Name>SaleIO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

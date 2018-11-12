@@ -46,5 +46,19 @@
     <Compile Include="Purchase.cs" />
     <Compile Include="Supplier.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppIO\AppIO.csproj">
+      <Project>{b1f7743e-898e-452a-97e7-4554dc9322e1}</Project>
+      <Name>AppIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchaseIO\PurchaseIO.csproj">
+      <Project>{a4dec87c-2483-4192-b9cd-b9a0ec941cb5}</Project>
+      <Name>PurchaseIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{8dbab079-56f6-4a69-9371-c38698534253}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
