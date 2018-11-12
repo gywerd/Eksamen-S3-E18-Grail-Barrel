@@ -4,10 +4,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{C9B042F7-BF6E-4E79-8ED7-51D9F66A7915}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Indkøb.png = Documentation\Indkøb.png
+		Documentation\Leverandør.png = Documentation\Leverandør.png
+		Documentation\Login.png = Documentation\Login.png
+		Documentation\UML-Klassediagram.png = Documentation\UML-Klassediagram.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GbGUI", "GbGUI", "{737CC7A1-D2DA-4F99-8CC8-7EE913198DA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GbBizz", "GbBizz", "{7E205EA4-A26E-4F98-B95C-45A3D8936075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GbIO", "GbIO", "{EF68FD99-1F76-46AA-BC29-E3A23D60C86E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Purchase", "Purchase", "{F6C9B63E-3193-4B84-9D3B-03E80A1997F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sale", "Sale", "{27F23363-9160-4310-88BE-41FD9EF7F196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplier", "Supplier", "{F2852FC9-E44B-48B1-A193-6DB814343922}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6C9B63E-3193-4B84-9D3B-03E80A1997F3} = {7E205EA4-A26E-4F98-B95C-45A3D8936075}
+		{27F23363-9160-4310-88BE-41FD9EF7F196} = {7E205EA4-A26E-4F98-B95C-45A3D8936075}
+		{F2852FC9-E44B-48B1-A193-6DB814343922} = {7E205EA4-A26E-4F98-B95C-45A3D8936075}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9C1F5D3-3FA4-4EEF-A88F-7D7CA94BACA7}
