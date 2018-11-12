@@ -45,6 +45,13 @@
     <Compile Include="GrainBarrelClient.cs" />
     <Compile Include="OpenExchangeRates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{8dbab079-56f6-4a69-9371-c38698534253}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

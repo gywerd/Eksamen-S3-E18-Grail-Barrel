@@ -42,11 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="BaseRate.cs" />
     <Compile Include="ContactInfo.cs" />
     <Compile Include="Credential.cs" />
     <Compile Include="Grain.cs" />
     <Compile Include="LegalPerson.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Rate.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="User.cs" />
     <Compile Include="ZipTown.cs" />
