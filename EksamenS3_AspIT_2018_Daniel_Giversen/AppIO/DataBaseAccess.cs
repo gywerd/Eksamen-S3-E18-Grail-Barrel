@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PurchaseIO
+namespace AppIO
 {
     public class DataBaseAccess : DbConn
     {

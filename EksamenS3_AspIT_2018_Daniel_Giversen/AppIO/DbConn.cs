@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Collections;
 using System.Windows.Forms;
 
-namespace PurchaseIO
+namespace AppIO
 {
     public class DbConn
     {
