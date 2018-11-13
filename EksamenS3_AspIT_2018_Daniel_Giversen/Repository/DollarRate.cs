@@ -6,23 +6,13 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class DollarRates
+    public class DollarRate
     {
-        #region Fields
-        private List<Rate> rateList;
-        private string _disclaimer;
-        private string _licence;
-        private string _timestamp;
-        private string _base;
-        private Dictionary<string, decimal> _rates;
-
-        #endregion
-
         #region Constructors
         /// <summary>
         /// Empty Constructor
         /// </summary>
-        public DollarRates()
+        public DollarRate()
         {
         }
 
@@ -35,15 +25,15 @@ namespace Repository
         public void FillListWithDollarRates()
         {
             List<Rate> ld = new List<Rate>();
-            foreach (var item in _rates)
+            foreach (var item in rates)
             {
                 Rate cd = new Rate();
                 cd.CurrencyCode = item.Key;
-                cd.Value = Convert.ToDouble(item.Value);
+                cd.Value = Convert.ToDecimal(item.Value);
                 ld.Add(cd);
             }
 
-            rateList = ld;
+            RateList = ld;
         }
 
         /// <summary>
@@ -53,7 +43,7 @@ namespace Repository
         /// <returns>string</returns>
         public string GetRateFromCountryCode(string currencyCode)
         {
-            foreach (Rate rate in rateList)
+            foreach (Rate rate in RateList)
             {
                 if (rate.CurrencyCode == currencyCode)
                 {
@@ -66,47 +56,26 @@ namespace Repository
         #endregion
 
         #region Properties
-        public List<Rate> RateList
-        {
-            get { return this.rateList; }
-            set { this.rateList = value; }
-        }
+        public List<Rate> RateList { get;  set; }
 
-        public string disclaimer
-        {
-            get { return this._disclaimer; }
-            set { this._disclaimer = value; }
-        }
+        public string disclaimer { get; set; }
 
-        public string licence
-        {
-            get { return this._licence; }
-            set { this._licence = value; }
-        }
+        public string licence { get; set; }
 
+        public string timestamp { get; set; }
 
-        public string timestamp
-        {
-            get { return this._timestamp; }
-            set { this._timestamp = value; }
-        }
-
-        public string @base
-        {
-            get { return this._base; }
-            set { this._base = value; }
-        }
+        public string @base { get; set; }
 
         public Dictionary<string, decimal> rates
         {
-            get { return this._rates; }
+            get
+            {
+                return rates;
+            }
             set
             {
-                if (value != _rates)
-                {
-                    this._rates = value;
-                    FillListWithDollarRates();
-                }
+                rates = value;
+                FillListWithDollarRates();
             }
         }
 

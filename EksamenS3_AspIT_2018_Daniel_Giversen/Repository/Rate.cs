@@ -9,8 +9,6 @@ namespace Repository
     public class Rate
     {
         #region Fields
-        private string currencyCode;
-        private double value;
         private static List<BaseRate> BaseRateList = new List<BaseRate>() { new BaseRate("DKK", "Danske Kroner"), new BaseRate("EUR", "Euro"), new BaseRate("GBP", "Britiske Pund"), new BaseRate("USD", "Amerikanske Dollars") };
 
         #endregion
@@ -27,8 +25,8 @@ namespace Repository
         /// <param name="rate">Rate</param>
         public Rate(Rate rate)
         {
-            this.currencyCode = rate.CurrencyCode;
-            this.value = rate.Value;
+            CurrencyCode = rate.CurrencyCode;
+            Value = rate.Value;
         }
 
         /// <summary>
@@ -38,8 +36,8 @@ namespace Repository
         /// <param name="value">string</param>
         public Rate(string currencyCode, string value)
         {
-            this.currencyCode = currencyCode;
-            this.value = Convert.ToDouble(value);
+            CurrencyCode = currencyCode;
+            Value = Convert.ToDecimal(value);
         }
 
         /// <summary>
@@ -47,10 +45,10 @@ namespace Repository
         /// </summary>
         /// <param name="currencyCode">string - abbreviation of currency - 3 character string</param>
         /// <param name="value">double</param>
-        public Rate(string currencyCode, double value)
+        public Rate(string currencyCode, decimal value)
         {
-            this.currencyCode = currencyCode;
-            this.value = value;
+            CurrencyCode = currencyCode;
+            Value = value;
         }
 
         #endregion
@@ -58,24 +56,15 @@ namespace Repository
         #region Methods
         public override string ToString()
         {
-            return currencyCode + ": " + Math.Round(value, 2).ToString("0.##");
+            return CurrencyCode + ": " + Math.Round(Value, 2).ToString("0.##");
         }
 
         #endregion
 
         #region Properties
-        public string CurrencyCode
-        {
-            get { return this.currencyCode; }
-            set { this.currencyCode = value; }
-        }
+        public string CurrencyCode { get; set; }
 
-        public double Value
-        {
-            get { return this.value; }
-            set { this.value = value; }
-        }
-
+        public decimal Value { get; set; }
         #endregion
 
     }

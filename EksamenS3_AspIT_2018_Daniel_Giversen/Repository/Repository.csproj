@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,15 +52,18 @@
     <Compile Include="BaseRate.cs" />
     <Compile Include="ContactInfo.cs" />
     <Compile Include="Credential.cs" />
-    <Compile Include="DollarRates.cs" />
+    <Compile Include="DollarRate.cs" />
     <Compile Include="Grain.cs" />
-    <Compile Include="LegalPerson.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Supplyer.cs" />
     <Compile Include="Rate.cs" />
-    <Compile Include="Supplier.cs" />
+    <Compile Include="GrainBarrelContext.cs" />
     <Compile Include="User.cs" />
     <Compile Include="ZipTown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

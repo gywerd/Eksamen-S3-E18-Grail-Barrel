@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UcPurchase.xaml.cs">
+      <DependentUpon>UcPurchase.xaml</DependentUpon>
+    </Compile>
     <Page Include="GrainDeal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +98,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UcPurchase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -126,6 +133,10 @@
     <ProjectReference Include="..\PurchaseBizz\PurchaseBizz.csproj">
       <Project>{3c1951f6-7f38-41dd-bf33-2cfbaed81172}</Project>
       <Name>PurchaseBizz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{8dbab079-56f6-4a69-9371-c38698534253}</Project>
+      <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

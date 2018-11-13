@@ -27,14 +27,14 @@ namespace PurchaseIO
             GetDataFromApi();
         }
 
-        public DollarRates GetCurrencyFromOpenExchangeRate()
+        public DollarRate GetCurrencyFromOpenExchangeRate()
         {
             //while (responseStream == "")
             //{
             //    Thread.Sleep(50);
             //}
 
-            return JsonConvert.DeserializeObject<DollarRates>(responseStream);
+            return JsonConvert.DeserializeObject<DollarRate>(responseStream);
         }
 
         //public async void GetDataFromApiAsync()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppIO
 {
-    public class DataBaseAccess : DbConn
+    public class Executor : DbConn
     {
         /*
          Not neacessary, when using entity Framework
@@ -22,14 +22,14 @@ namespace AppIO
         /// For yderligere info se: https://www.connectionstrings.com/sql-server/
         /// </summary>
         /// <param name="strCon"></param>
-        public DataBaseAccess(string strCon)
+        public Executor(string strCon)
         {
             strConnectionString = strCon;
         }
-        public List<string> ReadListFromDataBase()
+        public List<string> ReadListFromDataBase(string sqlQuery)
         {
             List<string> listRes = new List<string>();
-            DataTable dm = DbReturnDataTable("SELECT * FROM MaterialData");
+            DataTable dm = DbReturnDataTable(sqlQuery);
             foreach (DataRow row in dm.Rows)
             {
                 listRes.Add(row[1].ToString() + ";" + row[2].ToString());

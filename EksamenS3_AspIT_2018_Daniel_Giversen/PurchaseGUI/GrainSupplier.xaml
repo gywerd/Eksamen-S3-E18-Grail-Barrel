@@ -14,11 +14,13 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <ListView HorizontalAlignment="Stretch"
+                  ItemsSource="{Binding GBC.Suppliers}"
                   Margin="10,45,10,10"
                   VerticalAlignment="Stretch">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Grain Supplier"
+                                    DisplayMemberBinding="{Binding Name}"
                                     Width="250" />
                 </GridView>
             </ListView.View>

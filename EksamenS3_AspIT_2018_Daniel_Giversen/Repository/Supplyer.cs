@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class Person
+    public class Supplyer
     {
+        public string SupplierId { get; set; }
+        public string Cvr { get; set; } //CVR-nummer, Company Reference Number, Reference Identification number...
         public string Name { get; set; }
+        public Address Address { get; set; }
         public ContactInfo ContactInfo { get; set; }
     }
 }

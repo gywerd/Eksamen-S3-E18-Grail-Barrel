@@ -11,6 +11,6 @@ namespace Repository
         public string Name { get; set; }
         public string ItemNumber { get; set; }
         public string ItemGroup { get; set; }
-        public double PricePerTon { get; set; }
+        public decimal PricePerTon { get; set; }
     }
 }
